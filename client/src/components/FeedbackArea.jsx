@@ -48,13 +48,13 @@ function FeedbackArea(props) {
                 console.log(err);
             });;
 
-        // props.onAdd(move);
-        // setMove({
-        //     student: "",
-        //     skill: "",
-        //     praise: "",
-        //     feedback: ""
-        // });
+        props.onAdd(move);
+        setMove({
+            student: "",
+            skill: "",
+            praise: "",
+            feedback: ""
+        });
 
         setExpanded(false);
     }
