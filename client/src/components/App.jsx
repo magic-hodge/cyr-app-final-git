@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Header from "./Header";
 import FeedbackArea from "./FeedbackArea"
 import Feedback from "./Feedback";
