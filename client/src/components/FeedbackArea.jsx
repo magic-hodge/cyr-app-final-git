@@ -89,7 +89,7 @@ function FeedbackArea(props) {
                 />}
                 <textarea
                     name="feedback"
-                    placeholder="Feedback..."
+                    placeholder="New Feedback..."
                     rows={isExpanded ? 3 : 1}
                     onClick={expand}
                     onChange={handleChange}

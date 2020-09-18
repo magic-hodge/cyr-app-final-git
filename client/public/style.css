@@ -52,19 +52,19 @@
   }
 
   .move-item h1 {
-    font-size: 1.1em;
+    font-size: 1.5em;
     margin-bottom: 6px;
   }
   
   .move-item h2 {
-    font-size: 0.9em;
+    font-size: 1.25em;
     font-weight: 600;
     margin-left: 10px;
     margin-bottom: 6px;
   }
 
   .move-item p {
-    font-size: 0.9em;
+    font-size: 1.25em;
     margin-left: 20px;
     margin-bottom: 10px;
     white-space: pre-wrap;
