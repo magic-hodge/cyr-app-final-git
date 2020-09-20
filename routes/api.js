@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const Feedback = require('../models/feedback');
+const Student = require('../models/student');
 
 
 router.get('/', (req, res) => {
@@ -17,10 +18,26 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:studentName', (req, res) => {
-    // console.log(req.params.studentName);
-    const studentName = req.params.studentName;
-});
+// router.get('/ivydrips', (req, res) => {
+
+//     Feedback.find({})
+//         .then((data) => {
+//             // console.log('Data: ', data);
+//             res.json(data);
+//         })
+//         .catch((error) => {
+//             console.log('error: ', error);
+//         });
+// });
+
+// router.get('/:studentName', (req, res) => {
+//     const student = req.params.studentName;
+//     console.lug("student");
+//     // const student = new Student({
+//     //     name: studentName,
+//     //     feedbacks: studentFeedbacks
+//     // });
+// });
 
 // router.get('/one', (req, res) => {
 

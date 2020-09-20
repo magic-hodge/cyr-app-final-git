@@ -41,6 +41,11 @@ function App() {
 
     getFeedbacks();
 
+// To filter items by student... Insert after feedbacks.
+// .filter(feedbackItem =>
+//     feedbackItem.student === "Nick Hodge"
+// )
+
     return (
         <div>
             <Header />
@@ -56,7 +61,7 @@ function App() {
                 feedback={feedbackItem.feedback}
                 // onDelete={deleteMove}
                 />
-            })}
+            }).reverse()}
 
             <Footer />
         </div>
