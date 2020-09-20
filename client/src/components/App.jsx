@@ -39,11 +39,7 @@ function App() {
             });
     }
 
-    // useEffect(() => {
-    //     getFeedbacks();
-    // });
-
-    setTimeout(getFeedbacks, 100);
+    getFeedbacks();
 
     return (
         <div>

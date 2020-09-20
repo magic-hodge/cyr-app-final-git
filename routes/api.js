@@ -17,6 +17,11 @@ router.get('/', (req, res) => {
         });
 });
 
+router.get('/:studentName', (req, res) => {
+    // console.log(req.params.studentName);
+    const studentName = req.params.studentName;
+});
+
 // router.get('/one', (req, res) => {
 
 //     Feedback.find({ })
