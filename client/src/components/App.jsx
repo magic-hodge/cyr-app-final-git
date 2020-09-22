@@ -39,7 +39,7 @@ function App() {
             });
     }
 
-    getFeedbacks();
+    setTimeout(getFeedbacks, 100);
 
 // To filter items by student... Insert after feedbacks.
 // .filter(feedbackItem =>
