@@ -4,12 +4,13 @@ import FeedbackArea from "./FeedbackArea"
 import Feedback from "./Feedback";
 import Footer from "./Footer";
 import axios from "axios";
+import Student from "./Student";
 
 function App() {
     // const [moves, setMoves] = useState([]);
     const [feedbacks, setFeedbacks] = useState([]);
-
-    // function addMove(newMove) {
+    const [students, setStudents] = useState([]);
+    
     //     setMoves(prevMoves => {
     //     return [...prevMoves, newMove]; 
     //     });
@@ -50,6 +51,19 @@ function App() {
         <div>
             <Header />
             <FeedbackArea onAdd={getFeedbacks}/>
+            
+            {/* Displays Student List */}
+            
+            {feedbacks.map((feedbackItem, index) => {
+                return <Student
+                key={index}
+                id={index}
+                student={feedbackItem.student}
+                />
+            })}
+
+            {/* Displays feedbacks. */}
+
             {feedbacks.map((feedbackItem, index) => {
                 return <Feedback
                 key={index}
