@@ -95,7 +95,7 @@ function FeedbackArea(props) {
                     onChange={handleChange}
                     value={move.feedback}
                 />
-                <Zoom in={isExpanded? true : false}>
+                <Zoom in={isExpanded ? true : false}>
                     <Fab type="submit" onClick={submitFeedback}><AddIcon /></Fab>
                 </Zoom>
             </form>

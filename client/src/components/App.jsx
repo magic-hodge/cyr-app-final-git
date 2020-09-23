@@ -9,8 +9,9 @@ import Student from "./Student";
 function App() {
     // const [moves, setMoves] = useState([]);
     const [feedbacks, setFeedbacks] = useState([]);
-    const [students, setStudents] = useState([]);
-    
+    const [student, setStudent] = useState();
+    // const [isFiltered, setFiltered] = useState(false);
+
     //     setMoves(prevMoves => {
     //     return [...prevMoves, newMove]; 
     //     });
@@ -23,6 +24,14 @@ function App() {
     //         });
     //     });
     // }
+
+    function filterStudent(student) {
+    
+        setStudent(prevStudent => {
+            return student;
+        });
+        // setFiltered(true);
+    }
 
     function getFeedbacks() {
         
@@ -53,18 +62,25 @@ function App() {
             <FeedbackArea onAdd={getFeedbacks}/>
             
             {/* Displays Student List */}
-            
-            {feedbacks.map((feedbackItem, index) => {
-                return <Student
-                key={index}
-                id={index}
-                student={feedbackItem.student}
-                />
-            })}
+
+            <div className="student-list-box">
+                <ul className="student-list">
+                    {feedbacks.map((feedbackItem, index) => {
+                        return <Student
+                        key={index}
+                        id={index}
+                        student={feedbackItem.student}
+                        onFilter={filterStudent}
+                        />
+                    })}
+                </ul>
+            </div>
 
             {/* Displays feedbacks. */}
 
-            {feedbacks.map((feedbackItem, index) => {
+            {feedbacks.filter(feedbackItem => 
+                feedbackItem.student === student
+            ).map((feedbackItem, index) => {
                 return <Feedback
                 key={index}
                 id={index}

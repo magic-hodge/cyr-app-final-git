@@ -127,6 +127,17 @@
     outline: none;
   }
 
+  .student-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+
+  .student-item:hover {
+    color: #00909e;
+  }
+
 /* 
   Media queries. */
 
