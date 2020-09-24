@@ -10,6 +10,7 @@ function App() {
     // const [moves, setMoves] = useState([]);
     const [feedbacks, setFeedbacks] = useState([]);
     const [student, setStudent] = useState();
+    const [studentList, setStudentList] = useState([]);
     // const [isFiltered, setFiltered] = useState(false);
 
     //     setMoves(prevMoves => {
@@ -24,6 +25,18 @@ function App() {
     //         });
     //     });
     // }
+
+    
+    let newStudents = [];
+
+    feedbacks.forEach(function(feedbackItem) {
+        if (newStudents.includes(feedbackItem.student) != true) {
+            newStudents.push(feedbackItem.student);
+        }
+    });
+
+    // console.log(newStudents);
+
 
     function filterStudent(student) {
     
