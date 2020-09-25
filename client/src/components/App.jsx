@@ -78,14 +78,22 @@ function App() {
 
             <div className="student-list-box">
                 <ul className="student-list">
-                    {feedbacks.map((feedbackItem, index) => {
+                    {newStudents.map((studentItem, index) => {
+                        return <Student
+                        key={index}
+                        id={index}
+                        student={studentItem}
+                        onFilter={filterStudent}
+                        />
+                    })}
+                    {/* {feedbacks.map((feedbackItem, index) => {
                         return <Student
                         key={index}
                         id={index}
                         student={feedbackItem.student}
                         onFilter={filterStudent}
                         />
-                    })}
+                    })} */}
                 </ul>
             </div>
 
